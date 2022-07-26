@@ -7,9 +7,38 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
+    <div id="app">
+        <p>{{ link }}</p>
+        <p><a href="{{ link }}">Canal?</a></p>
+        <p><a v-bind:href="link">Canal</a></p>
+
+        <!-- Forma reduzida de adicionar diretivas -->
+        <p><a :href="link">Binded</a></p>
+        
+        <!-- Examplo de binding bidirecional -->
+        <p>
+            <input type="text" v-model="nome"><br>
+            <span> {{ nome }} </span>
+        </p>
+
+
+    </div>
 
     <script>
-        // ...
+        new Vue({
+            el: '#app',
+            data: {
+                nome:"Felipe",
+                link: "https://www.youtube.com/channel/UCwPWOlczAJ7_KVpaW84o3tg"
+            },
+            
+            // Faz uma ação com os valores em tempo real
+            watch: {
+                nome(novoValor) {
+                    console.log(novoValor.toUpperCase())
+                }
+            }
+        })
     </script>
 </body>
 </html>

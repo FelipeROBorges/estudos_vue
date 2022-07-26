@@ -7,9 +7,40 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
+    <!-- -->
+    <div id="app">
+        <p>Soma: {{ 2 + 2 }}</p>
+        <p>Caixa Alta: {{ "teste".toUpperCase() }}</p>
+        <p>Produto: {{ nome }}</p>
+        <p>Preço: {{ preco }}</p>
+        <p>Desconto: {{ desconto * 100 }}%</p>
+        <p>Hora Certa: {{ horaCerta() }}</p>
+        <p>Preço Final: R$ {{ precoComDesconto }}</p>
 
+        
+    </div>
     <script>
-        // ...
+
+        // Função construtora do VUE
+        new Vue({
+            el: "#app",
+            data:{
+            nome: 'Caixa de Som',
+            preco: 34,
+            desconto: 0.10
+            },
+            methods:{
+                horaCerta(){
+                    return new Date().toLocaleTimeString()
+                }
+            },
+            computed:{
+                precoComDesconto(){
+                    return this.preco * (1 - this.desconto)
+                }
+            }
+
+        })
     </script>
 </body>
 </html>
