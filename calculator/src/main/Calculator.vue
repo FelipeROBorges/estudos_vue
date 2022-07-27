@@ -18,7 +18,7 @@
     <Button label="0" double @onClick="addDigit"/>
     <Button label="." @onClick="addDigit"/>
     <Button label="=" operation @onClick="setOperation"/>
-
+    <a href="https://www.linkedin.com/in/felipe-borges-a5442b17a/" class="linkedin"> Linkedin </a>
   </div>
 </template>
 
@@ -95,4 +95,11 @@ export default {
     grid-template-rows: 1fr 48px 48px 48px 48px 48px;
 }
 
+.linkedin{
+  margin-left: 75px;
+  margin-top: 10px;
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+}
 </style>
