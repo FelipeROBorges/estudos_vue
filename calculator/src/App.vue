@@ -30,6 +30,6 @@ body{
   text-align: center;
 
   color: #fff;
-  background: linear-gradient(to right, rgb(83, 105, 118), rgb(41, 46, 73)  );
+  background: linear-gradient(to right, rgb(28, 120, 48), rgb(41, 73, 55)  );
 }
 </style>
