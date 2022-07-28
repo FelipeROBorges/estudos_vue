@@ -1,16 +1,16 @@
 <template>
   <div id="app">
     <h1>Problema de Monty Hall</h1>
-    <Gift/>
+    <Door number="1" :hasGift="false"/>
   </div>
 </template>
 
 <script>
-import Gift from './components/Gift.vue';
+import Door from './components/Door';
 
 export default {
     name:'App',
-    components: { Gift }
+    components: { Door }
 }
 </script>
 
@@ -25,13 +25,13 @@ body {
   background: linear-gradient(to right, #00CDAC, #02AAB0);
 }
 
-app {
+#app {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-h1 {
+#app h1 {
   border: 1px solid #000;
   background-color: #0004;
   padding: 20px;
